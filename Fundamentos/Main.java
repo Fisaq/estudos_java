@@ -6,7 +6,6 @@ package Fundamentos;
 /* Ao menos uma classe em Java precisa de ter o mesmo nome do arquivo,
 mesmo que este arquivo possua mais de uma classe. Esta classe precisa ser pública.*/
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Main {
@@ -93,6 +92,45 @@ public class Main {
 
         System.out.println(listaNomes.get(0));
 
+        //Loops em Java
 
+        //For => Interacoes limitadas com base em um critério de início e fim.
+
+        System.out.println("Lista de Nomes:\n");
+        for(int c = 0; c < listaNomes.size(); c++){
+            System.out.println(listaNomes.get(c));
+        }
+
+        //Outra forma de declaracao
+
+        for(String primeiroNome : listaNomes){
+            System.out.println(nome);
+        }
+
+        //While => Executado várias vezes até que determinada condição seja atingida
+
+        int cont = 0;
+        while(cont < 10){
+            System.out.println("Dentro do While");
+            cont +=1;
+        }
+
+        //Do While => Semelhante ao While, porém realiza a ação antes das condições do looping
+        int cont2 = 0;
+        do{
+            System.out.println("Estou no Do While");
+            cont2 +=1;
+        }while (cont2 < 10);
+
+        //Casting em Java - Transformação de tipos
+
+        //Cast explícito
+        double resultado = 2.0;
+        int resultadoInt = (int)resultado;
+
+        String minhaString = "10";
+        int meuInt = Integer.parseInt(minhaString);
+
+        String minhaStr = String.valueOf(meuInt);
     }
 }
