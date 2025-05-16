@@ -1,4 +1,4 @@
 package Fundamentos.Exercicios.Avancado;
 
-public class JogoDaVida {
+public class BuscaBinaria {
 }
