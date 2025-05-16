@@ -14,7 +14,13 @@ public class VerificadorNumPrimo {
         int entrada = ler.nextInt();
 
         teste.ehPrimo(entrada);
-
+        
+        ArrayList<Integer> listaDivisores = teste.divisores(entrada);
+        
+        System.out.println("Lista de divisores de " + entrada);
+        for(int num : listaDivisores){
+            System.out.println(num);
+        }
     }
 
     public void ehPrimo(int num){
@@ -22,10 +28,19 @@ public class VerificadorNumPrimo {
             System.out.println("O número " + num + " não é primo!");
         for(int c = 2; c <= Math.sqrt(num); c++){
             if (num % c == 0) {
-                System.out.printf("O número " + num + " não é primo!");
+                System.out.println("O número " + num + " não é primo!");
                 return;
             }
         }
         System.out.println("O número " + num + " é primo!");
+    }
+    
+    public ArrayList<Integer> divisores(int num){
+        ArrayList<Integer> divisores = new ArrayList<>();
+        for(int c = 1; c <= num; c++){
+            if (num % c == 0)
+                divisores.add(c);
+        }
+        return divisores;
     }
 }
